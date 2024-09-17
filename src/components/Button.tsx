@@ -1,4 +1,5 @@
 import cn from "@/lib/clsx";
+import { cva, type VariantProps } from "class-variance-authority";
 import Link, { LinkProps as NextLinkProps } from "next/link";
 import {
   ComponentPropsWithoutRef,
@@ -7,41 +8,54 @@ import {
   ReactNode,
 } from "react";
 
-interface LinkButtonProps extends NextLinkProps {
-  variant: "primary" | "secondary" | "danger" | "warning" | "success" | "text-primary";
+interface LinkButtonProps
+  extends NextLinkProps,
+    VariantProps<typeof buttonVariants> {
+  variant:
+    | "primary"
+    | "secondary"
+    | "danger"
+    | "warning"
+    | "success"
+    | "text-primary";
   children: ReactNode;
   href: string;
   target?: HTMLAttributeAnchorTarget;
   className?: string;
-} 
+}
 
-interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
+interface ButtonProps
+  extends ComponentPropsWithoutRef<"button">,
+    VariantProps<typeof buttonVariants> {
   children?: ReactNode;
   type?: "button" | "reset" | "submit";
   onClick?: MouseEventHandler<HTMLButtonElement>;
   isDisabled?: boolean;
   className?: string;
-  variant?: "primary" | "secondary" | "danger" | "warning" | "success" | "text-primary";
+  variant?:
+    | "primary"
+    | "secondary"
+    | "danger"
+    | "warning"
+    | "success"
+    | "text-primary";
 }
 
-const variants = {
-  "text-primary":
-    "px-6 py-2 text-primary-blue rounded-xl hover:bg-primary-blue hover:scale-105 transition-all duration-300 hover:text-light",
-  primary:
-    "px-6 py-2 bg-primary-blue rounded-xl hover:bg-secondary-blue hover:scale-105 transition-all duration-300 text-light",
-  secondary:
-    "px-6 py-2 bg-secondary-blue rounded-xl hover:scale-105 transition-all duration-300 text-light",
-  danger:
-    "px-6 py-2 bg-red-500 rounded-xl hover:bg-red-700 hover:scale-105 transition-all duration-300 text-light",
-  warning:
-    "px-6 py-2 bg-yellow-500 rounded-xl hover:bg-yellow-700 hover:scale-105 transition-all duration-300 text-light",
-  success:
-    "px-6 py-2 bg-green-500 rounded-xl hover:bg-green-700 hover:scale-105 transition-all duration-300 text-light",
-};
-
-function getVariantClass(variant: keyof typeof variants): string {
-  return variants[variant];
-}
+const buttonVariants = cva(
+  "rounded-xl px-6 py-2 hover:scale-105 transition-all duration-300 text-light hover:text-light",
+  {
+    variants: {
+      variant: {
+        "text-primary": "text-primary-blue hover:bg-primary-blue",
+        primary: "bg-primary-blue hover:bg-secondary-blue ",
+        secondary: "bg-secondary-blue",
+        danger: "bg-red-500 hover:bg-red-700",
+        warning: "bg-yellow-500 hover:bg-yellow-700",
+        success: "bg-green-500 hover:bg-green-700",
+      },
+    },
+  }
+);
 
 export function Button({
   children,
@@ -56,7 +70,7 @@ export function Button({
       type={type}
       onClick={onClick}
       disabled={isDisabled}
-      className={cn(getVariantClass(variant), className)}
+      className={cn(buttonVariants({ variant }), className)}
     >
       {children}
     </button>
@@ -70,10 +84,7 @@ export function ButtonLink({
   href,
 }: Readonly<LinkButtonProps>) {
   return (
-    <Link
-      href={href}
-      className={cn(getVariantClass(variant), className)}
-    >
+    <Link href={href} className={cn(buttonVariants({ variant }), className)}>
       {children}
     </Link>
   );
