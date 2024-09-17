@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-import { ButtonLink } from "./Button";
 import { H4 } from "./Text";
 
 const Navbar = () => {
@@ -25,12 +24,14 @@ const Navbar = () => {
   return (
     <nav className="bg-transparent fixed z-50 top-0 w-full backdrop-blur-xl">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-around h-24">
           <Link href="/" className="flex items-center gap-3">
             <div className="w-[60px] h-[60px]">
               <Image
-                src="/logo.svg"
-                alt="NextGenAi logo"
+                width={200}
+                height={80}
+                src="/nextdata.svg"
+                alt="NextGenAi nextdata"
                 className="object-contain w-full h-full"
               />
             </div>
@@ -53,7 +54,7 @@ const Navbar = () => {
               ))}
             </div>
 
-            <div className="hidden md:flex gap-2">
+            {/* <div className="hidden md:flex gap-2">
               <ButtonLink href="login" variant="text-primary">
                 Login
               </ButtonLink>
@@ -64,7 +65,7 @@ const Navbar = () => {
               >
                 Register
               </ButtonLink>
-            </div>
+            </div> */}
 
             <button
               onClick={toggleMenu}
@@ -115,20 +116,6 @@ const Navbar = () => {
                 {navOption.name}
               </Link>
             ))}
-            <ButtonLink
-              href="login"
-              variant="primary"
-              className="mt-4 text-center"
-            >
-              Login
-            </ButtonLink>
-            <ButtonLink
-              href="register"
-              variant="text-primary"
-              className="border border-primary-blue mt-2 text-center"
-            >
-              Register
-            </ButtonLink>
           </div>
         </div>
       )}

@@ -83,8 +83,10 @@ export default function Footer() {
           <Link href="/" className="flex items-center gap-3 mb-4">
             <div className="w-[60px] h-[60px]">
               <Image
-                src="/logo.svg"
-                alt="NextGenAi logo"
+              width={200}
+              height={80}
+                src="/nextdata.svg"
+                alt="NextGenAi nextdata"
                 className="object-contain w-full h-full"
               />
             </div>
@@ -101,7 +103,7 @@ export default function Footer() {
         <FooterLinksSection title="Other Links" links={otherLinks} />
       </footer>
 
-      <P className="text-center py-2">All Right Reserved &copy; 2024 PinPan</P>
+      <P className="text-center py-2">All Right Reserved &copy; 2024 Next Data Indonesia</P>
     </>
   );
 }
