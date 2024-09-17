@@ -71,7 +71,7 @@ export default function Footer() {
             <SmallCard className="w-auto h-[60px] flex justify-between px-6 mx-auto">
               <P className="text-lg">More Information</P>
               <ButtonLink variant="secondary" href="">
-                Contact Here
+                Contact
               </ButtonLink>
             </SmallCard>
           </div>

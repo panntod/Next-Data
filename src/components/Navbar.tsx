@@ -24,18 +24,18 @@ const Navbar = () => {
   return (
     <nav className="bg-transparent fixed z-50 top-0 w-full backdrop-blur-xl">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-around h-24">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-[60px] h-[60px]">
+        <div className="flex items-center justify-between sm:justify-around h-24">
+          <Link href="/" className="flex items-center gap-1 sm:gap-3">
+            <div className="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px]">
               <Image
                 width={200}
                 height={80}
                 src="/nextdata.svg"
-                alt="NextGenAi nextdata"
+                alt="NextData"
                 className="object-contain w-full h-full"
               />
             </div>
-            <H4 className="text-dark">NextGenAi</H4>
+            <H4 className="text-dark text-xl sm:text-2xl">NextData</H4>
           </Link>
           <div className="flex items-center">
             <div className="hidden md:flex ml-10 items-baseline space-x-4">
