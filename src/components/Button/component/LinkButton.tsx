@@ -12,12 +12,13 @@ export function ButtonLink({
   scroll,
   download,
   disabledProgressBar,
-  prefetch
+  prefetch,
+  size = 'medium'
 }: Readonly<LinkButtonProps>) {
   return (
     <Link
       href={href}
-      className={cn(buttonVariants({ variant }), className)}
+      className={cn(buttonVariants({ variant, size }), className)}
       target={target}
       scroll={scroll}
       download={download}

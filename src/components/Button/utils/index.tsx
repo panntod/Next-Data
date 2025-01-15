@@ -1,20 +1,26 @@
 import { cva } from 'class-variance-authority'
 
 export const buttonVariants = cva(
-  'rounded-[14px] px-[24px] py-[16px] transition-all duration-300 text-light hover:text-light',
+  'transition-all duration-300 text-light hover:text-light', // Base styles
   {
     variants: {
       variant: {
         'text-primary': 'text-primary-blue hover:bg-primary-blue',
-        primary: 'bg-primary-blue hover:bg-secondary-blue ',
+        primary: 'bg-primary-blue hover:bg-secondary-blue',
         secondary: 'bg-secondary-blue',
         danger: 'bg-red-500 hover:bg-red-700',
         warning: 'bg-yellow-500 hover:bg-yellow-700',
         success: 'bg-green-500 hover:bg-green-700'
+      },
+      size: {
+        small: 'px-[16px] py-[8px] text-sm rounded-[6px]',
+        medium: 'px-[24px] py-[16px] text-base rounded-[12px]',
+        large: 'px-[32px] py-[20px] text-lg rounded-[16px]'
       }
     },
     defaultVariants: {
-      variant: 'primary'
+      variant: 'primary',
+      size: 'medium'
     }
   }
 )
