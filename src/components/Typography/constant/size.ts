@@ -1,0 +1,32 @@
+export const SIZE_VARIANT = {
+  DISPLAY_XL: { className: 'text-[48px] font-semibold', tag: 'h1' },
+  DISPLAY_LG: { className: 'text-[44px] font-semibold', tag: 'h2' },
+  DISPLAY_MD: { className: 'text-[40px] font-semibold', tag: 'h3' },
+  DISPLAY_SM: { className: 'text-[32px] font-semibold', tag: 'h4' },
+  TITLE_XL: { className: 'text-[32px] font-medium', tag: 'h5' },
+  TITLE_LG: { className: 'text-[28px] font-medium', tag: 'h5' },
+  TITLE_MD: { className: 'text-[24px] font-medium', tag: 'h6' },
+  TITLE_SM: { className: 'text-[20px] font-medium', tag: 'p' },
+  TITLE_XS: { className: 'text-[16px] font-medium', tag: 'p' },
+  SUBTITLE_LG: { className: 'text-[20px] font-normal', tag: 'p' },
+  SUBTITLE_MD: { className: 'text-[18px] font-normal', tag: 'p' },
+  SUBTITLE_SM: { className: 'text-[16px] font-normal', tag: 'p' },
+  BODY_LG_NORMAL: { className: 'text-[16px] font-normal', tag: 'p' },
+  BODY_MD_NORMAL: { className: 'text-[14px] font-normal', tag: 'p' },
+  BODY_SM_NORMAL: { className: 'text-[12px] font-normal', tag: 'p' },
+  BODY_LG_BOLDEST: { className: 'text-[16px] font-medium', tag: 'p' },
+  BODY_MD_BOLDEST: { className: 'text-[14px] font-medium', tag: 'p' },
+  BODY_SM_BOLDEST: { className: 'text-[12px] font-medium', tag: 'p' },
+  LABEL_LG_NORMAL: { className: 'text-[16px] font-normal', tag: 'label' },
+  LABEL_MD_NORMAL: { className: 'text-[14px] font-normal', tag: 'label' },
+  LABEL_SM_NORMAL: { className: 'text-[12px] font-normal', tag: 'label' },
+  LABEL_LG_BOLDEST: { className: 'text-[16px] font-medium', tag: 'label' },
+  LABEL_MD_BOLDEST: { className: 'text-[14px] font-medium', tag: 'label' },
+  LABEL_SM_BOLDEST: { className: 'text-[12px] font-medium', tag: 'label' },
+  HELPER_TEXT_LG: { className: 'text-[14px] font-normal', tag: 'span' },
+  HELPER_TEXT_MD: { className: 'text-[12px] font-normal', tag: 'span' },
+  HELPER_TEXT_SM: { className: 'text-[10px] font-normal', tag: 'span' },
+  TABLE_HEADER: { className: 'text-[14px] font-semibold uppercase tracking-[0.1em]', tag: 'th' }
+} as const
+
+export type SizeVariant = keyof typeof SIZE_VARIANT
