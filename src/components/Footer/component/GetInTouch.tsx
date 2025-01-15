@@ -17,7 +17,7 @@ export const GetInTouch = () => {
           </Typography>
           <Card size='small' className='w-auto h-[60px] flex justify-between px-6 mx-auto'>
             <Typography className='text-lg'>More Information</Typography>
-            <ButtonLink variant='secondary' href='' text='Contact' />
+            <ButtonLink variant='secondary' size='small' href='' text='Contact' />
           </Card>
         </div>
       </SectionWrapper>

@@ -29,8 +29,8 @@ export const NavWebsite = ({ data, location, handleOpen, isOpen }: NavbarProps) 
                 href={item.link}
                 className={
                   location.split('/')[1] === item.link.split('/')[1]
-                    ? 'text-primary-blue'
-                    : 'text-gray-700 hover:text-primary-blue duration-300 transition-all'
+                    ? 'text-secondary-blue font-semibold'
+                    : 'text-gray-700 hover:text-secondary-blue duration-300 transition-all'
                 }
               >
                 {item.name}

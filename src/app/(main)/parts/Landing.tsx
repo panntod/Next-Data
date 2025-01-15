@@ -7,7 +7,7 @@ import { Typography } from '@/components/Typography'
 export function Landing() {
   return (
     <MainWrapper className='flex flex-col-reverse sm:flex-row items-center sm:justify-between py-24 sm:pt-0'>
-      <SectionWrapper className='w-full sm:w-[520px] text-wrap'>
+      <SectionWrapper className='w-full sm:w-[600px] text-wrap'>
         <Typography size='DISPLAY_XL' className='text-secondary-blue'>
           Working Closely With Customers In <span className='text-primary-blue'>NextGenAI</span>
         </Typography>
