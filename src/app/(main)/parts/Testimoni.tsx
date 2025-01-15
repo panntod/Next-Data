@@ -1,28 +1,30 @@
-import React from "react";
-
-import { SmallCard } from "@/components/Card";
-import { H1, H2, P } from "@/components/Text";
-import { MainWrapper, SectionWrapper } from "@/components/Wrapper";
+import { Card } from '@/components/Card'
+import { MainWrapper, SectionWrapper } from '@/components/Layout'
+import { Typography } from '@/components/Typography'
 
 export function Testimoni() {
   return (
-    <MainWrapper className="flex flex-col justify-center">
-      <SectionWrapper className="w-full sm:w-[600px]">
-        <H2 className="text-secondary-blue">
+    <MainWrapper className='flex flex-col justify-center'>
+      <SectionWrapper className='w-full sm:w-[700px]'>
+        <Typography size='DISPLAY_LG' className='text-secondary-blue'>
           We Provide Facilities for Two Mutually Beneficial Positions
-        </H2>
-        <P className="my-6">Our number of projects and satisfied customers.</P>
+        </Typography>
+        <Typography className='my-6'>Our number of projects and satisfied customers.</Typography>
       </SectionWrapper>
-      <SectionWrapper className="w-full my-12 flex flex-col sm:flex-row justify-center items-center gap-12">
-        <SmallCard className="flex-col">
-          <H1 className="text-secondary-blue">6+</H1>
-          <P className="text-xl font-semibold">Field</P>
-        </SmallCard>
-        <SmallCard className="flex-col">
-          <H1 className="text-secondary-blue">35+</H1>
-          <P className="text-xl font-semibold">Complete Work</P>
-        </SmallCard>
+      <SectionWrapper className='w-full my-12 flex flex-col sm:flex-row justify-center items-center gap-12'>
+        <Card size='small' className='flex-col'>
+          <Typography size='DISPLAY_XL' className='text-secondary-blue'>
+            6+
+          </Typography>
+          <Typography className='text-xl font-semibold'>Field</Typography>
+        </Card>
+        <Card size='small' className='flex-col'>
+          <Typography size='DISPLAY_XL' className='text-secondary-blue'>
+            35+
+          </Typography>
+          <Typography className='text-xl font-semibold'>Complete Work</Typography>
+        </Card>
       </SectionWrapper>
     </MainWrapper>
-  );
+  )
 }

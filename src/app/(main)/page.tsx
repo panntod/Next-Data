@@ -1,10 +1,10 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { Footer } from '@/components/Footer'
+import { Navbar } from '@/components/Navbar'
 
-import { Landing } from "./parts/Landing";
-import { Testimoni } from "./parts/Testimoni";
-import { About } from "./parts/About";
-import { Stories } from "./parts/Stories";
+import { About } from './parts/About'
+import { Landing } from './parts/Landing'
+import { Stories } from './parts/Stories'
+import { Testimoni } from './parts/Testimoni'
 
 export default function page() {
   return (
@@ -16,5 +16,5 @@ export default function page() {
       <Stories />
       <Footer />
     </>
-  );
+  )
 }
