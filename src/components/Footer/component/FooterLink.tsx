@@ -20,7 +20,7 @@ const FooterLinksSection = ({ title, links }: Readonly<FooterProps>) => (
 export const FooterLink = () => {
   return (
     <footer>
-      <section className='bg-[#E2F2FF] pt-24 sm:pt-72 pb-24 mt-0 sm:-mt-64 flex flex-col sm:flex-row justify-around items-start w-full px-6 sm:px-0'>
+      <section className='bg-light-blue pt-12 sm:pt-72 pb-12 -mt-24 sm:-mt-64 flex flex-col sm:flex-row justify-around items-start w-full px-6 sm:px-0'>
         <div className='w-full sm:w-1/3 mb-8 sm:mb-0'>
           <Link href='/' className='flex items-center gap-3 mb-4'>
             <div className='w-[60px] h-[60px]'>
@@ -28,16 +28,16 @@ export const FooterLink = () => {
                 width={200}
                 height={80}
                 src='/nextdata.svg'
-                alt='NextGenAi nextdata'
+                alt='NextData Logo'
                 className='object-contain w-full h-full'
               />
             </div>
             <Typography size='DISPLAY_SM' className='text-dark'>
-              NextGenAi
+              NextData
             </Typography>
           </Link>
           <Typography>
-            Join NextGenAI and harness the power of AI to drive your business forward. We&apos;re here to support your
+            Join NextData and harness the power of AI to drive your business forward. We&apos;re here to support your
             journey.
           </Typography>
         </div>
@@ -47,9 +47,11 @@ export const FooterLink = () => {
         <FooterLinksSection title='Other Links' links={otherLinks} />
       </section>
 
-      <Typography className='bg-[#E2F2FF] text-center py-3'>
-        All Right Reserved &copy; {new Date().getFullYear()} Next Data Indonesia
-      </Typography>
+      <section className='bg-light-blue py-3 w-full text-center'>
+        <Typography size='LABEL_MD_NORMAL'>
+          All Right Reserved &copy; {new Date().getFullYear()} Next Data Indonesia
+        </Typography>
+      </section>
     </footer>
   )
 }

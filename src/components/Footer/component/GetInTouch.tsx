@@ -1,5 +1,4 @@
 import { ButtonLink } from '@/components/Button'
-import { Card } from '@/components/Card'
 import { MainWrapper, SectionWrapper } from '@/components/Layout'
 import { Typography } from '@/components/Typography'
 
@@ -15,10 +14,11 @@ export const GetInTouch = () => {
             We&apos;d love to hear from you! Whether you have a question about our services, need support, or want to
             provide feedback, feel free to reach out.
           </Typography>
-          <Card size='small' className='w-auto h-[60px] flex justify-between px-6 mx-auto'>
+
+          <article className='w-auto h-[60px] flex justify-between px-6 mx-auto rounded-xl sm:rounded-2xl shadow-lg bg-light items-center'>
             <Typography className='text-lg'>More Information</Typography>
             <ButtonLink variant='secondary' size='small' href='' text='Contact' />
-          </Card>
+          </article>
         </div>
       </SectionWrapper>
     </MainWrapper>

@@ -6,7 +6,7 @@ export function Button({
   type = 'button',
   onClick,
   text = 'Button',
-  isDisabled,
+  isDisabled = false,
   className = '',
   variant = 'primary',
   size = 'medium'
@@ -18,7 +18,7 @@ export function Button({
       disabled={isDisabled}
       className={cn(buttonVariants({ variant, size }), className)}
     >
-      <p className='leading-[160%] text-light text-xl sm:text-sm'>{text}</p>
+      {text}
     </button>
   )
 }
