@@ -1,75 +1,78 @@
+import Image from 'next/image'
+
 import { ButtonLink } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { MainWrapper, SectionWrapper } from '@/components/Layout'
 import { Typography } from '@/components/Typography'
-import Image from 'next/image'
 
 export function About() {
   return (
-    <MainWrapper className='flex flex-col sm:flex-row justify-between items-center'>
-      <SectionWrapper className='w-full sm:w-[600px]'>
+    <MainWrapper className='flex flex-col lg:flex-row justify-between items-center mb-24'>
+      <SectionWrapper className='w-full lg:w-[600px] py-6'>
         <Typography size='DISPLAY_LG' className='text-secondary-blue'>
-          Supply Chain Optimization
+          Shaping the Future Through AI Training
         </Typography>
         <Typography size='BODY_MD_NORMAL' className='my-6'>
-          Whether you&apos;re an AI freelancer looking for exciting projects or a client seeking innovative AI
-          solutions, our platform is the ideal place to connect and succeed. Sign up today and start transforming your
-          ideas with AI.
+          Whether you&apos;re an AI freelancer seeking impactful projects or a client in need of innovative solutions,
+          our platform is where connections lead to success. Join us today and turn your ideas into AI-driven reality.
         </Typography>
 
         <ButtonLink variant='primary' href='' text='Read More' />
       </SectionWrapper>
 
-      <SectionWrapper className='w-full sm:w-1/2 relative overflow-hidden sm:overflow-visible'>
-        <div className='w-[710px] h-[710px] absolute sm:-top-10 -z-10 bg-[#E2F2FF] rounded-full' />
-        <Card size='medium' className='sm:ml-24 my-6 justify-start'>
+      <SectionWrapper className='w-full sm:w-1/2 relative overflow-hidden sm:overflow-visible py-6 '>
+        <div className='w-[460px] lg:w-[620px] h-[480px] lg:h-[640px] absolute -z-10 bg-light-blue rounded-full -mt-4 md:-mt-12' />
+
+        <Card size='small' className='mx-auto sm:mx-0 sm:ml-24 justify-start'>
           <Image
             src='/nextdata-outline.svg'
             alt='nextdata outlined'
             className='object-contain'
-            width={150}
-            height={150}
+            width={100}
+            height={100}
           />
           <div>
-            <Typography size='BODY_MD_NORMAL' className='text-xl font-semibold'>
-              Data
+            <Typography size='BODY_MD_NORMAL' className='font-semibold'>
+              TRUST
             </Typography>
-            <Typography size='DISPLAY_SM' className='text-secondary-blue'>
-              Optimizing data generation
+            <Typography size='BODY_LG_BOLDEST' className='text-secondary-blue'>
+              100% Legal and Officially Verified Data.
             </Typography>
           </div>
         </Card>
-        <Card size='medium' className='sm:ml-auto my-6 justify-start'>
+
+        <Card size='small' className='mx-auto sm:mx-0 sm:ml-auto my-6 justify-start'>
           <Image
             src='/nextdata-outline.svg'
             alt='nextdata outlined'
             className='object-contain'
-            width={150}
-            height={150}
+            width={100}
+            height={100}
           />
           <div>
-            <Typography size='BODY_SM_NORMAL' className='text-xl font-semibold'>
-              AI
+            <Typography size='BODY_MD_NORMAL' className='font-semibold'>
+              QUALITY
             </Typography>
-            <Typography size='DISPLAY_SM' className='text-secondary-blue'>
-              Assist with AI generation
+            <Typography size='BODY_LG_BOLDEST' className='text-secondary-blue'>
+              Skilled Freelancers Across 154 Countries.
             </Typography>
           </div>
         </Card>
-        <Card size='medium' className='my-6 justify-start'>
+
+        <Card size='small' className='mx-auto sm:mx-0 justify-start'>
           <Image
             src='/nextdata-outline.svg'
             alt='nextdata outlined'
             className='object-contain'
-            width={150}
-            height={150}
+            width={100}
+            height={100}
           />
           <div>
-            <Typography size='BODY_SM_NORMAL' className='text-xl font-semibold'>
-              Product
+            <Typography size='BODY_MD_NORMAL' className='font-semibold'>
+              EXPERIENCE
             </Typography>
-            <Typography size='DISPLAY_SM' className='text-secondary-blue'>
-              Product AI support
+            <Typography size='BODY_LG_BOLDEST' className='text-secondary-blue'>
+              1M+ Hours, 500+ AI Projects Completed.
             </Typography>
           </div>
         </Card>

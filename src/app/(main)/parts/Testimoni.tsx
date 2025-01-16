@@ -7,22 +7,30 @@ export function Testimoni() {
     <MainWrapper className='flex flex-col justify-center'>
       <SectionWrapper className='w-full sm:w-[700px]'>
         <Typography size='DISPLAY_LG' className='text-secondary-blue'>
-          We Provide Facilities for Two Mutually Beneficial Positions
+          Fostering Mutually Beneficial Opportunities
         </Typography>
-        <Typography className='my-6'>Our number of projects and satisfied customers.</Typography>
+        <Typography className='my-6'>
+          Delivering impactful projects and building lasting customer satisfaction.
+        </Typography>
       </SectionWrapper>
       <SectionWrapper className='w-full my-12 flex flex-col sm:flex-row justify-center items-center gap-12'>
         <Card size='small' className='flex-col'>
-          <Typography size='DISPLAY_XL' className='text-secondary-blue'>
-            6+
+          <Typography size='DISPLAY_LG' className='text-secondary-blue'>
+            55K+
           </Typography>
-          <Typography className='text-xl font-semibold'>Field</Typography>
+          <Typography size='BODY_LG_BOLDEST'>Freelancers Worldwide</Typography>
         </Card>
         <Card size='small' className='flex-col'>
-          <Typography size='DISPLAY_XL' className='text-secondary-blue'>
+          <Typography size='DISPLAY_LG' className='text-secondary-blue'>
             35+
           </Typography>
-          <Typography className='text-xl font-semibold'>Complete Work</Typography>
+          <Typography size='BODY_LG_BOLDEST'>Languages and Dialects</Typography>
+        </Card>
+        <Card size='small' className='flex-col'>
+          <Typography size='DISPLAY_LG' className='text-secondary-blue'>
+            154
+          </Typography>
+          <Typography size='BODY_LG_BOLDEST'>Country We Serve</Typography>
         </Card>
       </SectionWrapper>
     </MainWrapper>
