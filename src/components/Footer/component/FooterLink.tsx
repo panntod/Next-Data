@@ -6,12 +6,12 @@ import { FooterProps } from '../types/Footer.types'
 
 const FooterLinksSection = ({ title, links }: Readonly<FooterProps>) => (
   <div className='w-full sm:w-auto flex flex-col space-y-2 mb-8 sm:mb-0'>
-    <Typography size='DISPLAY_SM' className='text-dark'>
+    <Typography size='BODY_LG_BOLDEST' className='text-dark'>
       {title}
     </Typography>
     {links.map((link, index) => (
       <Link key={index} href={link.href}>
-        <Typography>{link.label}</Typography>
+        <Typography size='BODY_MD_NORMAL'>{link.label}</Typography>
       </Link>
     ))}
   </div>
@@ -48,7 +48,7 @@ export const FooterLink = () => {
       </section>
 
       <section className='bg-light-blue py-3 w-full text-center'>
-        <Typography size='LABEL_MD_NORMAL'>
+        <Typography size='SUBTITLE_SM'>
           All Right Reserved &copy; {new Date().getFullYear()} Next Data Indonesia
         </Typography>
       </section>
