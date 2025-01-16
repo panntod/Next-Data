@@ -11,8 +11,9 @@ export const Navbar = () => {
 
   const navOptions = [
     { name: 'Home', link: '/' },
-    { name: 'About', link: '/about' },
-    { name: 'Contact', link: '/contact' }
+    { name: 'About Us', link: '/about' },
+    { name: 'Why Us', link: '/why' },
+    { name: 'Services', link: '/service' }
   ]
 
   const handleOpen = () => {
