@@ -1,7 +1,8 @@
 import { ReactNode } from 'react'
 
-export interface SectionWrapperProps {
+export interface SectionWrapperProps extends React.HTMLAttributes<HTMLElement> {
   children?: ReactNode
-  id?: string
+  id: string
   className?: string
+  bgColor?: string
 }

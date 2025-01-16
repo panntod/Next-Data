@@ -1,3 +1,5 @@
+'use client'
+
 import cn from '@/lib/clsx'
 import { ButtonProps } from '../types/Button.types'
 import { buttonVariants } from '../utils'
