@@ -17,7 +17,7 @@ export const GetInTouch = () => {
 
           <article className='w-auto h-[60px] flex justify-between px-6 mx-auto rounded-xl sm:rounded-2xl shadow-lg bg-light items-center'>
             <Typography className='text-lg'>More Information</Typography>
-            <ButtonLink variant='secondary' size='small' href='' text='Contact' />
+            <ButtonLink variant='secondary' size='small' href='https://wa.me/6282335692537' text='Contact' />
           </article>
         </div>
       </SectionWrapper>

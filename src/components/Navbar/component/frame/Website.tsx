@@ -9,7 +9,7 @@ export const NavWebsite = ({ data, location, handleOpen, isOpen }: NavbarProps) 
       <div className='flex items-center justify-between sm:justify-around h-24'>
         <Link href='/' className='flex items-center gap-1 sm:gap-3'>
           <div className='w-[40px] h-[40px] sm:w-[60px] sm:h-[60px]'>
-            <Image width={80} height={80} src='/nextdata.svg' alt='NextData' className='object-contain w-full h-full' />
+            <Image width={80} height={80} src='/logo.svg' alt='NextData' className='object-contain w-full h-full' />
           </div>
           <Typography size='DISPLAY_SM' className='text-dark text-xl sm:text-2xl'>
             NextData

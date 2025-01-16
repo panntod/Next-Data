@@ -27,7 +27,7 @@ export const FooterLink = () => {
               <Image
                 width={200}
                 height={80}
-                src='/nextdata.svg'
+                src='/logo.svg'
                 alt='NextData Logo'
                 className='object-contain w-full h-full'
               />

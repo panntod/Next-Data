@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   authors: { name: 'Panntod', url: 'https://panntod.github.io' },
   creator: 'Next Data Developer',
   publisher: 'Next Data Indonesia',
-  icons: '/nextdata.svg'
+  icons: '/logo.svg'
 }
 
 export default function RootLayout({

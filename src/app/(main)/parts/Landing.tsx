@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { Button } from '@/components/Button'
+import { ButtonLink } from '@/components/Button'
 import { MainWrapper, SectionWrapper } from '@/components/Layout'
 import { Typography } from '@/components/Typography'
 
@@ -16,7 +16,7 @@ export function Landing() {
           Connect with top AI professionals to elevate your projects. Since 2024, we&apos;ve been innovating and shaping
           the future through AI training and design.
         </Typography>
-        <Button variant='primary' size='medium' text='Get Started Now' />
+        <ButtonLink variant='primary' size='medium' href='http://wa.me/6282335692537' text='Get Started Now' />
       </SectionWrapper>
       <figure className='w-auto sm:w-[570px] h-auto sm:h-[440px]'>
         <Image

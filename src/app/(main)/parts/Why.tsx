@@ -18,7 +18,7 @@ export function Why() {
 
       <SectionWrapper className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
         <Card size='large' className='flex flex-col items-start px-6'>
-          <Image src='/nextdata-outline.svg' alt='nextdata outlined' width={80} height={80} />
+          <Image src='/nextdata.svg' alt='nextdata outlined' width={80} height={80} />
 
           <Typography size='BODY_MD_BOLDEST'>Leading the Future of AI Solutions</Typography>
           <Typography size='BODY_MD_NORMAL'>
@@ -48,7 +48,7 @@ export function Why() {
         </Card>
 
         <Card size='large' className='flex flex-col items-start px-6'>
-          <Image src='/nextdata-outline.svg' alt='nextdata outlined' width={80} height={80} />
+          <Image src='/nextdata.svg' alt='nextdata outlined' width={80} height={80} />
 
           <Typography size='BODY_MD_BOLDEST'>Continuous Training for AI Excellence</Typography>
           <Typography size='BODY_MD_NORMAL'>
