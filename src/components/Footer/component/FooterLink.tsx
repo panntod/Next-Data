@@ -1,7 +1,7 @@
 import { Typography } from '@/components/Typography'
 import Image from 'next/image'
 import Link from 'next/link'
-import { companyLinks, otherLinks, serviceLinks } from '../constant/link'
+import { company_links, other_links, service_link } from '../constant/link'
 import { FooterProps } from '../types/Footer.types'
 
 const FooterLinksSection = ({ title, links }: Readonly<FooterProps>) => (
@@ -42,9 +42,9 @@ export const FooterLink = () => {
           </Typography>
         </div>
 
-        <FooterLinksSection title='Our Links' links={companyLinks} />
-        <FooterLinksSection title='Our Services' links={serviceLinks} />
-        <FooterLinksSection title='Other Links' links={otherLinks} />
+        <FooterLinksSection title='Our Links' links={company_links} />
+        <FooterLinksSection title='Our Services' links={service_link} />
+        <FooterLinksSection title='Other Links' links={other_links} />
       </section>
 
       <section className='bg-light-blue py-3 w-full text-center'>
