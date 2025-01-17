@@ -3,7 +3,12 @@ import { FooterLink } from '@/components/Footer'
 import { MainWrapper, SectionWrapper } from '@/components/Layout'
 import { Navbar } from '@/components/Navbar'
 import { Typography } from '@/components/Typography'
+import { Metadata } from 'next'
 import { faq_en } from './constant/FAQ'
+
+export const metadata: Metadata = {
+  title: 'FAQ'
+}
 
 export default function Faq() {
   return (
