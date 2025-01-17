@@ -1,3 +1,3 @@
 export * from './component/Typography'
-export * from './constant/size'
+export * from './constant/SIZE'
 export * from './types/Typography.types'

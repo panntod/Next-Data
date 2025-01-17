@@ -1,5 +1,5 @@
 import cn from '@/lib/clsx'
-import { SIZE_VARIANT } from '../constant/size'
+import { SIZE_VARIANT } from '../constant/SIZE'
 import { TypographyProps } from '../types/Typography.types'
 
 export function Typography({ children, size = 'BODY_MD_NORMAL', className = '' }: Readonly<TypographyProps>) {

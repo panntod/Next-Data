@@ -1,7 +1,7 @@
 import { Typography } from '@/components/Typography'
 import Image from 'next/image'
 import Link from 'next/link'
-import { company_links, other_links, service_link } from '../constant/link'
+import { company_links, other_links, service_link } from '../constant/LINKS'
 import { FooterProps } from '../types/Footer.types'
 
 const FooterLinksSection = ({ title, links }: Readonly<FooterProps>) => (
