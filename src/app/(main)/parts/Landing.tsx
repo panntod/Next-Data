@@ -20,7 +20,7 @@ export function Landing() {
       </SectionWrapper>
       <figure className='w-auto sm:w-[570px] h-auto sm:h-[440px]'>
         <Image
-          src='/computer-vector.png'
+          src='/landing-vector.svg'
           alt='vector computer'
           className='object-contain w-full h-full'
           width={570}
