@@ -19,8 +19,8 @@ const FooterLinksSection = ({ title, links }: Readonly<FooterProps>) => (
 
 export const FooterLink = () => {
   return (
-    <footer>
-      <section className='bg-light-blue pt-12 sm:pt-72 pb-12 -mt-24 sm:-mt-64 flex flex-col sm:flex-row justify-around items-start w-full px-6 sm:px-0'>
+    <>
+      <section className='bg-light-blue py-12 flex flex-col sm:flex-row justify-around items-start w-full px-6 sm:px-0'>
         <div className='w-full sm:w-1/3 mb-8 sm:mb-0'>
           <Link href='/' className='flex items-center gap-3 mb-4'>
             <div className='w-[60px] h-[60px]'>
@@ -52,6 +52,6 @@ export const FooterLink = () => {
           All Right Reserved &copy; {new Date().getFullYear()} Next Data Indonesia
         </Typography>
       </section>
-    </footer>
+    </>
   )
 }

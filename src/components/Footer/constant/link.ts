@@ -16,7 +16,6 @@ export const serviceLinks: FooterLink[] = [
 ]
 
 export const otherLinks: FooterLink[] = [
-  { href: '/', label: 'FAQ' },
-  { href: '/', label: 'Privacy Policy' },
-  { href: '/', label: 'Terms & Conditions' }
+  { href: '/faq', label: 'FAQ' },
+  { href: '/privacy-policy', label: 'Privacy Policy' }
 ]
