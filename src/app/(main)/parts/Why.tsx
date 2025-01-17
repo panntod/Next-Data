@@ -5,8 +5,8 @@ import Image from 'next/image'
 
 export function Why() {
   return (
-    <MainWrapper className='flex flex-col items-center justify-center'>
-      <SectionWrapper>
+    <MainWrapper id='why' className='flex flex-col items-center justify-center'>
+      <SectionWrapper id='why-section-1'>
         <Typography size='DISPLAY_LG' className='text-secondary-blue text-center'>
           What Sets Next Data Indonesia Apart?
         </Typography>
@@ -16,7 +16,7 @@ export function Why() {
         </Typography>
       </SectionWrapper>
 
-      <SectionWrapper className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
+      <SectionWrapper id='why-section-2' className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
         <Card size='large' className='flex flex-col items-start px-6'>
           <Image src='/nextdata.svg' alt='nextdata outlined' width={80} height={80} />
 

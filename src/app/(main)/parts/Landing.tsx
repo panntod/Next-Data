@@ -6,8 +6,8 @@ import { Typography } from '@/components/Typography'
 
 export function Landing() {
   return (
-    <MainWrapper className='flex flex-col-reverse sm:flex-row items-center sm:justify-between'>
-      <SectionWrapper className='w-full sm:w-[700px] text-wrap'>
+    <MainWrapper id='landing' className='flex flex-col-reverse sm:flex-row items-center sm:justify-between'>
+      <SectionWrapper id='landing-section' className='w-full sm:w-[700px] text-wrap'>
         <Typography size='DISPLAY_XL' className='text-secondary-blue'>
           Empowering Businesses with Cutting-Edge AI Solutions at{' '}
           <span className='text-primary-blue'>Next Data Indonesia</span>

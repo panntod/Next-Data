@@ -6,7 +6,7 @@ import { Landing } from './parts/Landing'
 import { Testimoni } from './parts/Testimoni'
 import { Why } from './parts/Why'
 
-export default function Main() {
+export default function Home() {
   return (
     <>
       <Navbar />

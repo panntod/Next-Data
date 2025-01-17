@@ -4,8 +4,8 @@ import { Typography } from '@/components/Typography'
 
 export function Testimoni() {
   return (
-    <MainWrapper className='flex flex-col justify-center'>
-      <SectionWrapper className='w-full sm:w-[700px]'>
+    <MainWrapper id='testimoni' className='flex flex-col justify-center'>
+      <SectionWrapper id='testimoni-section-1' className='w-full sm:w-[700px]'>
         <Typography size='DISPLAY_LG' className='text-secondary-blue'>
           Fostering Mutually Beneficial Opportunities
         </Typography>
@@ -13,7 +13,10 @@ export function Testimoni() {
           Delivering impactful projects and building lasting customer satisfaction.
         </Typography>
       </SectionWrapper>
-      <SectionWrapper className='w-full my-12 flex flex-col sm:flex-row justify-center items-center gap-12'>
+      <SectionWrapper
+        id='testimoni-section-2'
+        className='w-full my-12 flex flex-col sm:flex-row justify-center items-center gap-12'
+      >
         <Card size='small' className='flex-col'>
           <Typography size='DISPLAY_LG' className='text-secondary-blue'>
             55K+

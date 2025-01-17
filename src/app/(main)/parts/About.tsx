@@ -7,8 +7,8 @@ import { Typography } from '@/components/Typography'
 
 export function About() {
   return (
-    <MainWrapper className='flex flex-col lg:flex-row justify-between items-center mb-24'>
-      <SectionWrapper className='w-full lg:w-[600px] py-6'>
+    <MainWrapper id='about' className='flex flex-col lg:flex-row justify-between items-center mb-24'>
+      <SectionWrapper id='about-section-1' className='w-full lg:w-[600px] py-6'>
         <Typography size='DISPLAY_LG' className='text-secondary-blue'>
           Shaping the Future Through AI Training
         </Typography>
@@ -20,7 +20,10 @@ export function About() {
         <ButtonLink variant='primary' href='' text='Read More' />
       </SectionWrapper>
 
-      <SectionWrapper className='w-full sm:w-1/2 relative overflow-hidden sm:overflow-visible py-6 '>
+      <SectionWrapper
+        id='about-section-2'
+        className='w-full sm:w-1/2 relative overflow-hidden sm:overflow-visible py-6 '
+      >
         <div className='w-[460px] lg:w-[620px] h-[480px] lg:h-[640px] absolute -z-10 bg-light-blue rounded-full -mt-4 md:-mt-12' />
 
         <Card size='small' className='mx-auto sm:mx-0 sm:ml-24 justify-start'>
