@@ -20,7 +20,7 @@ export function Accordion({ data = [], showNumber = false }: Readonly<AccordionP
         const isExpanded = expanded === panelId
 
         return (
-          <SectionWrapper id={panelId} key={'key-' + index}>
+          <section id={panelId} key={'key-' + index}>
             <button
               id={`accordion-collapse-heading-${index}`}
               type='button'
@@ -33,7 +33,7 @@ export function Accordion({ data = [], showNumber = false }: Readonly<AccordionP
               aria-expanded={isExpanded}
               aria-controls={`accordion-collapse-body-${index}`}
             >
-              <Typography size='TITLE_MD' className='font-normal'>
+              <Typography size='TITLE_MD' className='font-normal text-start'>
                 {showNumber && `${index + 1}. `} {item.title}
               </Typography>
 
@@ -71,7 +71,7 @@ export function Accordion({ data = [], showNumber = false }: Readonly<AccordionP
                 item.content
               )}
             </div>
-          </SectionWrapper>
+          </section>
         )
       })}
     </SectionWrapper>
