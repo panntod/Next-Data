@@ -75,7 +75,7 @@ export function About() {
               EXPERIENCE
             </Typography>
             <Typography size='BODY_LG_BOLDEST' className='text-secondary-blue'>
-              1M+ Hours, 500+ AI Projects Completed.
+              1M+ Hours and 500+ AI Projects Completed.
             </Typography>
           </div>
         </Card>
