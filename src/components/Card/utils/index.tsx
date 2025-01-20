@@ -4,8 +4,8 @@ export const cardVariants = cva('rounded-xl sm:rounded-2xl shadow-lg bg-light fl
   variants: {
     size: {
       small: 'w-[280px] sm:w-[300px] min-h-[140px] sm:min-h-[160px]',
-      medium: 'w-[320px] md:w-[400px] min-h-[160px] md:min-h-[200px]',
-      large: 'w-[360px] md:w-[500px] min-h-[220px] md:min-h-[260px]'
+      medium: 'w-[300px] md:w-[400px] min-h-[160px] md:min-h-[200px]',
+      large: 'w-[320px] md:w-[500px] min-h-[220px] md:min-h-[260px]'
     }
   },
   defaultVariants: {

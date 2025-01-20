@@ -25,7 +25,7 @@ export function Service() {
           >
             <Image
               src={service.image}
-              className='w-full h-[80px] md:h-[300px]'
+              className='w-full h-[120px] md:h-[300px]'
               alt='nextdata outlined'
               width={500}
               height={300}
