@@ -157,13 +157,13 @@ export function Content() {
           designed to prevent unauthorized or unlawful processing, accidental loss, and damage to your data.
         </Typography>
         <Typography size='BODY_LG_BOLDEST'>7. How Long Is Your Personal Data Stored?</Typography>
+
+        <Typography size='BODY_MD_BOLDEST'>If You Are Hired</Typography>
         <Typography size='BODY_MD_NORMAL'>
-          If You Are Hired: Your data will be processed in accordance with the “Next Data Indonesia” Global Employee
-          Privacy Notice.
+          Your data will be processed in accordance with the “Next Data Indonesia” Global Employee Privacy Notice.
         </Typography>
-        <Typography size='BODY_MD_NORMAL'>
-          If You Are Not Hired: Your data may be retained for the following purposes:
-        </Typography>
+        <Typography size='BODY_MD_BOLDEST'>If You Are Not Hired</Typography>
+        <Typography size='BODY_MD_NORMAL'>Your data may be retained for the following purposes:</Typography>
         <ul className='px-12 list-disc'>
           <li>
             <Typography size='BODY_MD_NORMAL'>Future job opportunities.</Typography>
@@ -184,7 +184,8 @@ export function Content() {
         <Typography size='BODY_LG_BOLDEST'>9. Questions and Concerns</Typography>
         <Typography size='BODY_MD_NORMAL'>
           For non-EU candidates, if you have questions about privacy or wish to contact one of our data controllers,
-          please reach out to the Data Protection Officer (DPO) for your hiring entity, or email us at
+          please reach out to the Data Protection Officer (DPO) for your hiring entity, or email us at{' '}
+          <Link href='mailto:admin@nextdata.my.id'>admin@nextdata.my.id</Link>
         </Typography>
         <Typography size='BODY_MD_NORMAL' className='my-4'>
           Our policies may change as our business evolves. Check this notice regularly for updates.

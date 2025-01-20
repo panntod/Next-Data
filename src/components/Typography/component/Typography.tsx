@@ -7,5 +7,5 @@ export function Typography({ children, size = 'BODY_MD_NORMAL', className = '' }
 
   const Element = Tag as keyof JSX.IntrinsicElements
 
-  return <Element className={cn(sizeClassName, className)}>{children}</Element>
+  return <Element className={cn(sizeClassName, 'text-wrap', className)}>{children}</Element>
 }
