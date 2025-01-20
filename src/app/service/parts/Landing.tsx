@@ -8,7 +8,7 @@ export function Landing() {
     <MainWrapper id='landing' className='flex flex-col sm:flex-row items-center sm:justify-between pt-32'>
       <figure className='w-auto sm:w-[570px] h-auto sm:h-[440px]'>
         <Image
-          src='/service-vector.svg'
+          src='/service-vector.png'
           alt='vector computer'
           className='object-contain w-full h-full'
           width={570}

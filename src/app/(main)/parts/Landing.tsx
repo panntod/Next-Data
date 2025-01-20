@@ -6,7 +6,7 @@ import { Typography } from '@/components/Typography'
 
 export function Landing() {
   return (
-    <MainWrapper id='landing' className='flex flex-col-reverse sm:flex-row items-center sm:justify-between'>
+    <MainWrapper id='landing' className='flex flex-col-reverse sm:flex-row items-center sm:justify-between pt-32'>
       <SectionWrapper id='landing-section' className='w-full sm:w-[700px] text-wrap'>
         <Typography size='DISPLAY_XL' className='text-secondary-blue'>
           Empowering Businesses with Cutting-Edge AI Solutions at{' '}
@@ -20,7 +20,7 @@ export function Landing() {
       </SectionWrapper>
       <figure className='w-auto sm:w-[570px] h-auto sm:h-[440px]'>
         <Image
-          src='/landing-vector.svg'
+          src='/landing-vector.png'
           alt='vector computer'
           className='object-contain w-full h-full'
           width={570}
