@@ -37,8 +37,7 @@ export const FooterLink = () => {
             </Typography>
           </Link>
           <Typography>
-            Join NextData and harness the power of AI to drive your business forward. We&apos;re here to support your
-            journey.
+            Building a smarter tomorrow by connecting AI freelancers with clients in need of innovative solutions.
           </Typography>
         </div>
 
