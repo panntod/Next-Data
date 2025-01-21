@@ -2,6 +2,7 @@ import { Card } from '@/components/Card'
 import { MainWrapper, SectionWrapper } from '@/components/Layout'
 import { Typography } from '@/components/Typography'
 import Image from 'next/image'
+import { en_why } from '../constant/WHY'
 
 export function Why() {
   return (
@@ -17,44 +18,19 @@ export function Why() {
       </SectionWrapper>
 
       <SectionWrapper id='why-section-2' className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
-        <Card size='large' className='flex flex-col items-start px-6'>
-          <Image src='/nextdata.svg' alt='nextdata outlined' width={80} height={80} />
+        {en_why.map(({ title, description }, index) => (
+          <Card key={'card-' + index} size='large' className='flex flex-col items-start p-6'>
+            <Image
+              src={index == 0 || index == 3 ? '/nextdata.svg' : '/nextdata-outline.svg'}
+              alt='nextdata outlined'
+              width={80}
+              height={80}
+            />
 
-          <Typography size='BODY_MD_BOLDEST'>Leading the Future of AI Solutions</Typography>
-          <Typography size='BODY_MD_NORMAL'>
-            One of the fastest-growing AI solution providers, expanding teams and partnering with tech giants to drive
-            innovation.
-          </Typography>
-        </Card>
-
-        <Card size='large' className='flex flex-col items-start px-6'>
-          <Image src='/nextdata-outline.svg' alt='nextdata outlined' width={80} height={80} />
-
-          <Typography size='BODY_MD_BOLDEST'>Global Reach with 55,000 Freelancers</Typography>
-          <Typography size='BODY_MD_NORMAL'>
-            Serving 154 countries, our network of 55,000+ active freelancers delivers exceptional AI solutions
-            worldwide.
-          </Typography>
-        </Card>
-
-        <Card size='large' className='flex flex-col items-start px-6'>
-          <Image src='/nextdata-outline.svg' alt='nextdata outlined' width={80} height={80} />
-
-          <Typography size='BODY_MD_BOLDEST'>On-Time Delivery of AI Projects Since 2024</Typography>
-          <Typography size='BODY_MD_NORMAL'>
-            Next Data Indonesia has consistently delivered every AI training project on schedule, ensuring reliability
-            and excellence.
-          </Typography>
-        </Card>
-
-        <Card size='large' className='flex flex-col items-start px-6'>
-          <Image src='/nextdata.svg' alt='nextdata outlined' width={80} height={80} />
-
-          <Typography size='BODY_MD_BOLDEST'>Continuous Training for AI Excellence</Typography>
-          <Typography size='BODY_MD_NORMAL'>
-            Keeps freelancers ahead in AI innovation with ongoing, free training on the latest technologies.
-          </Typography>
-        </Card>
+            <Typography size='BODY_MD_BOLDEST'>{title}</Typography>
+            <Typography size='BODY_MD_NORMAL'>{description}</Typography>
+          </Card>
+        ))}
       </SectionWrapper>
     </MainWrapper>
   )

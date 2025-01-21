@@ -1,18 +1,18 @@
 import { FooterLink } from '../types/Footer.types'
 
 export const company_links: FooterLink[] = [
-  { href: '/', label: 'About Us' },
-  { href: '/', label: 'Why Us' },
-  { href: '/', label: 'Services' }
+  { href: '/about', label: 'About Us' },
+  { href: '/why', label: 'Why Us' },
+  { href: '/service', label: 'Services' }
 ]
 
 export const service_link: FooterLink[] = [
-  { href: '/', label: 'Transcription' },
-  { href: '/', label: 'Voice Over' },
-  { href: '/', label: 'Voice Recording' },
-  { href: '/', label: 'Data Collection' },
-  { href: '/', label: 'Script Writing' },
-  { href: '/', label: 'Content Creation' }
+  { href: '/service', label: 'Transcription' },
+  { href: '/service', label: 'Voice Over' },
+  { href: '/service', label: 'Voice Recording' },
+  { href: '/service', label: 'Data Collection' },
+  { href: '/service', label: 'Script Writing' },
+  { href: '/service', label: 'Content Creation' }
 ]
 
 export const other_links: FooterLink[] = [
