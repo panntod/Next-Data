@@ -33,7 +33,7 @@ export function Accordion({ data = [], showNumber = false }: Readonly<AccordionP
               aria-expanded={isExpanded}
               aria-controls={`accordion-collapse-body-${index}`}
             >
-              <Typography size='TITLE_MD' className='font-normal text-start'>
+              <Typography size='TITLE_SM' className='font-normal text-start'>
                 {showNumber && `${index + 1}. `} {item.title}
               </Typography>
 
@@ -64,7 +64,7 @@ export function Accordion({ data = [], showNumber = false }: Readonly<AccordionP
               aria-labelledby={`accordion-collapse-heading-${index}`}
             >
               {typeof item.content === 'string' ? (
-                <Typography size='BODY_MD_NORMAL' className='text-gray-600'>
+                <Typography size='BODY_SM_NORMAL' className='text-gray-600'>
                   {item.content}
                 </Typography>
               ) : (
