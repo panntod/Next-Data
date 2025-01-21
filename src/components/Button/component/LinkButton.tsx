@@ -1,5 +1,6 @@
 import cn from '@/lib/clsx'
 import Link from 'next/link'
+import { PropsWithChildren } from 'react'
 import { LinkButtonProps } from '../types/LinkButton.types'
 import { buttonVariants } from '../utils'
 
@@ -13,8 +14,9 @@ export function ButtonLink({
   download,
   disabledProgressBar,
   prefetch,
-  size = 'medium'
-}: Readonly<LinkButtonProps>) {
+  size = 'medium',
+  children
+}: PropsWithChildren<LinkButtonProps>) {
   return (
     <Link
       href={href}
@@ -25,7 +27,7 @@ export function ButtonLink({
       data-disable-nprogress={disabledProgressBar}
       prefetch={prefetch}
     >
-      {text}
+      {text || children}
     </Link>
   )
 }
