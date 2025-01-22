@@ -76,20 +76,14 @@ export function Modal({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ ease: 'easeInOut', duration: 0.4 }}
+          transition={{ ease: 'easeInOut', duration: 0.6 }}
         >
-          <motion.section
-            className={modalSizeVariants({ size })}
-            initial={{ scale: 0.9 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0.95 }}
-            transition={{ ease: 'easeInOut', duration: 0.4 }}
-          >
+          <section className={modalSizeVariants({ size })}>
             <div className='relative bg-white rounded-lg shadow'>
               {renderContent()}
               {renderAction()}
             </div>
-          </motion.section>
+          </section>
         </motion.dialog>
       )}
     </>

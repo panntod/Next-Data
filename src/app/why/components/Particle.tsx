@@ -55,6 +55,9 @@ export function Particle() {
           >
             <motion.div
               className={cn('opacity-80 animate-float', getRandomTailwindColor())}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ ease: 'easeOut', duration: 0.6 }}
               style={{
                 width: `${size.width}px`,
                 height: `${size.height}px`
