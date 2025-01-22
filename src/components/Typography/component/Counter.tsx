@@ -19,7 +19,7 @@ export function Counter({ endCount = 100, duration = 5, size = 'BODY_MD_NORMAL',
       const controls = animate(count, endCount, { duration })
       return () => controls.stop()
     }
-  }, [isInView])
+  }, [count, duration, endCount, isInView])
 
   return (
     <motion.pre ref={ref} className={cn(sizeClassName, className)}>
