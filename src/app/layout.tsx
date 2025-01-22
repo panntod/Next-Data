@@ -46,6 +46,9 @@ export const metadata: Metadata = {
       }
     ],
     siteName: 'Next Data Indonesia'
+  },
+  verification: {
+    google: 'I7lt2K1qaRcn__KSyiG1dnCP3h18lpcKIC70g9WVuHg'
   }
 }
 
