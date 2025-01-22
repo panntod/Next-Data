@@ -1,8 +1,13 @@
+'use client'
+
 import { ButtonLink } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { MainWrapper, SectionWrapper } from '@/components/Layout'
 import { Typography } from '@/components/Typography'
+import { Counter } from '@/components/Typography/component/Counter'
+import { motion } from 'motion/react'
 import Image from 'next/image'
+import { en_about } from '../constant/ABOUT'
 
 export function Landing() {
   return (
@@ -11,43 +16,25 @@ export function Landing() {
         id='about-section-2'
         className='w-full sm:w-1/2 relative overflow-hidden sm:overflow-visible py-6 text-start'
       >
-        <div className='w-[400px] lg:w-[520px] h-[400px] lg:h-[520px] absolute -z-10 bg-light-blue rounded-full' />
+        <motion.div
+          className='w-[400px] lg:w-[520px] h-[400px] lg:h-[520px] absolute -z-10 bg-light-blue rounded-full'
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ ease: 'easeInOut', duration: 0.6 }}
+        />
 
-        <Card size='small' className='mx-auto sm:mx-0 sm:ml-24 justify-start'>
-          <Image src='/nextdata.svg' alt='nextdata' className='object-contain' width={100} height={100} />
-          <div>
-            <Typography size='DISPLAY_XL' className='text-secondary-blue'>
-              55K
-            </Typography>
-            <Typography size='BODY_MD_NORMAL' className='font-semibold'>
-              Freelancers Worldwide
-            </Typography>
-          </div>
-        </Card>
-
-        <Card size='small' className='mx-auto sm:mx-0 sm:ml-auto my-6 justify-start'>
-          <Image src='/nextdata.svg' alt='nextdata' className='object-contain' width={100} height={100} />
-          <div>
-            <Typography size='DISPLAY_XL' className='text-secondary-blue'>
-              500+
-            </Typography>
-            <Typography size='BODY_MD_NORMAL' className='font-semibold'>
-              Project Done
-            </Typography>
-          </div>
-        </Card>
-
-        <Card size='small' className='mx-auto sm:mx-0 justify-start'>
-          <Image src='/nextdata.svg' alt='nextdata' className='object-contain' width={100} height={100} />
-          <div>
-            <Typography size='DISPLAY_XL' className='text-secondary-blue'>
-              1M+
-            </Typography>
-            <Typography size='BODY_MD_NORMAL' className='font-semibold'>
-              Working Hours
-            </Typography>
-          </div>
-        </Card>
+        {en_about.map(({ number, title, additional_text, additional_class }, index) => (
+          <Card key={'card-' + index} size='small' className={['mx-auto justify-start', additional_class].join(' ')}>
+            <Image src='/nextdata.svg' alt='nextdata' className='object-contain' width={100} height={100} />
+            <div>
+              <div className='flex text-secondary-blue'>
+                <Counter duration={2} endCount={number} size='DISPLAY_XL' />
+                {!!additional_text && <Typography size='DISPLAY_LG'>{additional_text}</Typography>}
+              </div>
+              <Typography size='BODY_MD_BOLDEST'>{title}</Typography>
+            </div>
+          </Card>
+        ))}
       </SectionWrapper>
 
       <SectionWrapper id='about-section-1' className='w-full lg:w-[600px] py-6'>
