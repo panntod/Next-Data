@@ -7,6 +7,15 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
+    animation: {
+      float: 'float 3s infinite ease-in-out'
+    },
+    keyframes: {
+      float: {
+        '0%, 100%': { transform: 'translateY(0)' },
+        '50%': { transform: 'translateY(-10px)' }
+      }
+    },
     extend: {
       colors: {
         primary: {
