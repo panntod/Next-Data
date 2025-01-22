@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/Button'
 import { Typography } from '@/components/Typography'
+import { motion } from 'motion/react'
 import { PropsWithChildren } from 'react'
 import { ModalProps } from '../types/Modal.types'
 import { modalPositionVariants, modalSizeVariants } from '../utils'
@@ -70,14 +71,26 @@ export function Modal({
   return (
     <>
       {isOpen && (
-        <dialog className={modalPositionVariants({ position })}>
-          <section className={modalSizeVariants({ size })}>
+        <motion.dialog
+          className={modalPositionVariants({ position })}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ ease: 'easeInOut', duration: 0.4 }}
+        >
+          <motion.section
+            className={modalSizeVariants({ size })}
+            initial={{ scale: 0.9 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0.95 }}
+            transition={{ ease: 'easeInOut', duration: 0.4 }}
+          >
             <div className='relative bg-white rounded-lg shadow'>
               {renderContent()}
               {renderAction()}
             </div>
-          </section>
-        </dialog>
+          </motion.section>
+        </motion.dialog>
       )}
     </>
   )
