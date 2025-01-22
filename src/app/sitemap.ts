@@ -1,11 +1,13 @@
 import { MetadataRoute } from 'next'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const conventionalRoutes: MetadataRoute.Sitemap = ['/about', '/why', '/services', '/faq'].map(route => ({
-    url: `${process.env.APP_URL ?? 'https://next.pandhuarya.my.id'}${route}`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: 'yearly'
-  }))
+  const conventionalRoutes: MetadataRoute.Sitemap = ['/about', '/why', '/service', '/faq', '/privacy-policy'].map(
+    route => ({
+      url: `${process.env.APP_URL ?? 'https://next.pandhuarya.my.id'}${route}`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'yearly'
+    })
+  )
 
   return [
     {

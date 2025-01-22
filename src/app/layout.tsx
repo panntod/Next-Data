@@ -31,7 +31,22 @@ export const metadata: Metadata = {
   creator: 'Next Data Developer',
   publisher: 'Next Data Indonesia',
   icons: '/logo.svg',
-  robots: robots
+  robots: robots,
+  openGraph: {
+    title: 'Next Data Indonesia',
+    description:
+      'To become the leading platform that connects top AI professionals with innovative projects worldwide.',
+    url: process.env.APP_URL ?? 'https://next.pandhuarya.my.id',
+    images: [
+      {
+        url: '/logo.svg',
+        alt: 'Next Data Indonesia Logo',
+        width: 800,
+        height: 600
+      }
+    ],
+    siteName: 'Next Data Indonesia'
+  }
 }
 
 export const viewport: Viewport = {
