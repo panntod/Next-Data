@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import '../styles/globals.css'
 
 export const metadata: Metadata = {
-  title: "Admin",
+  title: 'Admin'
 }
 
 export const viewport: Viewport = {
@@ -15,9 +15,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  return (
-    <main>
-      {children}
-    </main>
-  )
+  return <main>{children}</main>
 }
