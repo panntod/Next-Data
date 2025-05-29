@@ -12,7 +12,7 @@ export const queryClient = new QueryClient({
       // Cegah retry berulang untuk error yang diprediksi (ex: 404)
       retry: (failureCount, error: unknown) => {
         // contoh: hanya retry jika bukan 404
-        if (error?.status === 404) return false
+        if ((error as { status?: number })?.status === 404) return false
         return failureCount < 2
       },
 
