@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next'
-import '../styles/globals.css'
 
 export const metadata: Metadata = {
   title: 'Admin'
