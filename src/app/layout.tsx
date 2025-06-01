@@ -2,6 +2,8 @@ import GoogleAnalytics from '@/lib/google.analytics'
 import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
 import '../styles/globals.css'
+import { Toaster } from 'sonner'
+import NextAuthProvider from '@/components/next-auth-provider'
 
 const geistSans = localFont({
   src: '../fonts/GeistVF.woff',
@@ -66,7 +68,10 @@ export default function RootLayout({
     <html lang='en' className='scroll-smooth'>
       {process.env.NODE_ENV === 'production' && process.env.APP_GA_ID && <GoogleAnalytics />}
 
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Toaster />
+        <NextAuthProvider>{children}</NextAuthProvider>
+      </body>
     </html>
   )
 }
