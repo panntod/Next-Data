@@ -58,8 +58,6 @@ export const authOptions: AuthOptions = {
 
           if (!isPasswordCorrect) return null
 
-          
-
           const administratorPayload = {
             id: administrator.id.toString(),
             role: administrator.role,

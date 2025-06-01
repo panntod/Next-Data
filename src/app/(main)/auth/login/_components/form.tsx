@@ -24,15 +24,12 @@ export default function LoginForm() {
     setLoading(true)
 
     try {
-
       const res = await signIn('credentials', {
         redirect: false,
         email: values.email,
         password: values.password,
         callbackUrl: '/'
       })
-
-
 
       if (res?.error) {
         setLoading(false)

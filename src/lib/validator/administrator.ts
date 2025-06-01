@@ -5,7 +5,7 @@ export const CreateAdministratorSchema = yup.object({
   username: yup.string().required('Username is required'),
   email: yup.string().email('Invalid email').required(),
   password: yup.string().min(8, 'Min 8 chars').required(),
-  role: yup.string(),
+  role: yup.string()
 })
 
 export const UpdateAdministratorSchema = yup.object({
@@ -13,5 +13,5 @@ export const UpdateAdministratorSchema = yup.object({
   username: yup.string().required('Username is required'),
   email: yup.string().email('Invalid email').required(),
   password: yup.string().min(8, 'Min 8 chars').required(),
-  role: yup.string(),
+  role: yup.string()
 })

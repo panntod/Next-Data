@@ -1,11 +1,11 @@
-import { getServerSession } from "@/lib/next-auth";
-import { redirect } from "next/navigation";
+import { getServerSession } from '@/lib/next-auth'
+import { redirect } from 'next/navigation'
 
 export default async function Auth() {
-  const session = await getServerSession();
+  const session = await getServerSession()
 
-  if (session?.administrator) return redirect("/");
-  if (!session?.administrator) return redirect("/auth/login");
+  if (session?.administrator) return redirect('/')
+  if (!session?.administrator) return redirect('/auth/login')
 
-  return <></>;
+  return <></>
 }
