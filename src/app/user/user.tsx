@@ -5,7 +5,7 @@ import { Button } from '@/components/Button'
 import Input from '@/components/Input/component/Input'
 import { Typography } from '@/components/Typography'
 import Pagination from '@/components/Pagination/component/Pagination' // Assuming this is the pagination component
-import { createUser, updateUser, deleteUser } from './actions' // Import Server Actions
+import { createUser, updateUser, deleteUser, restoreUser } from './actions' // Import Server Actions
 import { Prisma } from '@prisma/client' // Import Prisma namespace for types
 import { useRouter, useSearchParams } from 'next/navigation'
 
@@ -27,16 +27,13 @@ interface GetUsersResponse {
 
 const UsersPage = ({ user }: { user: GetUsersResponse }) => {
   // State for Update User form (Create and Delete will use form actions directly)
-  console.log(user.metaData)
-
   const searchParams = useSearchParams()
   const router = useRouter()
   const [updateUserId, setUpdateUserId] = useState<string>('')
   const [updateName, setUpdateName] = useState<string>('')
   const [updateEmail, setUpdateEmail] = useState<string>('')
-
-  // State for Delete User form
   const [deleteUserId, setDeleteUserId] = useState<string>('')
+  const [restoreUserId, setRestoreUserId] = useState<string>('')
 
   const handlePageChange = (page: number) => {
     // Update the URL with the new page number
@@ -64,7 +61,6 @@ const UsersPage = ({ user }: { user: GetUsersResponse }) => {
       setUpdateName('')
       setUpdateEmail('')
     }
-    // fetchUsers is called automatically by revalidatePath in the action
   }
 
   // Handle form submission for Delete User
@@ -75,7 +71,14 @@ const UsersPage = ({ user }: { user: GetUsersResponse }) => {
     } else {
       setDeleteUserId('')
     }
-    // fetchUsers is called automatically by revalidatePath in the action
+  }
+  const handleRestoreFormSubmit = async (formData: FormData) => {
+    const result = await restoreUser(formData)
+    if (result.messages !== 'success restore user') {
+      console.error('Failed to restore user:', result.messages)
+    } else {
+      setRestoreUserId('')
+    }
   }
 
   return (
@@ -150,6 +153,23 @@ const UsersPage = ({ user }: { user: GetUsersResponse }) => {
         </form>
       </div>
 
+      {/* Restore User Section */}
+      <div className='mb-8'>
+        <Typography>Restore User</Typography>
+        <form action={handleRestoreFormSubmit} className='flex gap-4'>
+          {' '}
+          {/* Use form action */}
+          <Input
+            placeholder='User ID'
+            name='id' // Add name attribute for FormData
+            value={restoreUserId}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRestoreUserId(e.target.value)}
+            required
+          />
+          <Button type='submit'>Restore</Button> {/* Use type='submit' */}
+        </form>
+      </div>
+
       {/* Get All Users Section */}
       <div>
         <Typography>All Users</Typography>
@@ -173,7 +193,10 @@ const UsersPage = ({ user }: { user: GetUsersResponse }) => {
               currentPage={user.metaData.currentPage}
               totalPages={user.metaData.totalPage}
               onChange={handlePageChange}
-              hasPrevPage={user.metaData.currentPage >= user.metaData.totalPage}
+              hasPrevPage={
+                user.metaData.currentPage > user.metaData.totalPage ||
+                user.metaData.currentPage == user.metaData.totalPage
+              }
               hasNextPage={user.metaData.currentPage < user.metaData.totalPage}
             />
           )}

@@ -22,13 +22,21 @@ interface GetUsersResponse {
 export async function getUsers({ page = 1, limit = 5 }: { page?: number; limit?: number }): Promise<GetUsersResponse> {
   try {
     const skip = (page - 1) * limit
+    const [users, totalUsers] = await Promise.all([
+      prisma.user.findMany({
+        skip: skip,
+        take: limit,
+        where: {
+          deletedAt: null // Ensure we only fetch non-deleted users
+        }
+      }),
+      prisma.user.count({
+        where: {
+          deletedAt: null // Count only non-deleted users
+        }
+      })
+    ])
 
-    const users = await prisma.user.findMany({
-      skip: skip,
-      take: limit
-    })
-
-    const totalUsers = await prisma.user.count()
     const totalPages = Math.ceil(totalUsers / limit)
 
     const metaData: PaginationMetaData = {
@@ -104,12 +112,34 @@ export async function deleteUser(formData: FormData) {
   try {
     const id = formData.get('id') as string
 
-    await prisma.user.delete({
-      where: { id: id }
+    await prisma.user.update({
+      where: { id: id },
+      data: {
+        deletedAt: new Date()
+      }
     })
 
     revalidatePath('/user') // Revalidate the user page
     return { messages: 'success delete user', data: null }
+  } catch (error) {
+    console.error('Error deleting user:', error)
+    return { messages: 'Failed to delete user', data: null }
+  }
+}
+
+export async function restoreUser(formData: FormData) {
+  try {
+    const id = formData.get('id') as string
+
+    await prisma.user.update({
+      where: { id: id },
+      data: {
+        deletedAt: null
+      }
+    })
+
+    revalidatePath('/user') // Revalidate the user page
+    return { messages: 'success restore user', data: null }
   } catch (error) {
     console.error('Error deleting user:', error)
     return { messages: 'Failed to delete user', data: null }
