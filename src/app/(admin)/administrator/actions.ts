@@ -4,7 +4,6 @@ import { createAdministrator, findAdministrator, removeAdministrator, updateAdmi
 import { generateHash } from '@/lib/encryption'
 import { getServerSession } from '@/lib/next-auth'
 import { revalidatePath } from 'next/cache'
-import { console } from 'inspector'
 
 interface ServerActionResponse {
   success: boolean
@@ -21,7 +20,7 @@ export async function upsertAdministrator(
 
     console.log('Current Administrator Role:', currentAdministratorRole)
 
-    // if (data.role && currentAdministratorRole !== 'admin') return { success: false, message: 'Forbidden' }
+    if (data.role && currentAdministratorRole !== 'admin') return { success: false, message: 'Forbidden' }
 
     if (!id) {
       const { name, username, email, role, password } = data
