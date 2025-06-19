@@ -1,8 +1,8 @@
-import { Footer } from '@/components/Footer'
-import { Navbar } from '@/components/Navbar'
-import { Landing } from './parts/Landing'
-import { Learn } from './parts/Learn'
-import { Paid } from './parts/Paid'
+import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
+import { Landing } from "./parts/Landing";
+import { Learn } from "./parts/Learn";
+import { Paid } from "./parts/Paid";
 
 export default function Why() {
   return (
@@ -13,5 +13,5 @@ export default function Why() {
       <Paid />
       <Footer />
     </>
-  )
+  );
 }

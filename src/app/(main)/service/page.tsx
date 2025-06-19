@@ -1,7 +1,7 @@
-import { Footer } from '@/components/Footer'
-import { Navbar } from '@/components/Navbar'
-import { Landing } from './parts/Landing'
-import { Service } from './parts/Service'
+import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
+import { Landing } from "./parts/Landing";
+import { Service } from "./parts/Service";
 
 export default function OurService() {
   return (
@@ -11,5 +11,5 @@ export default function OurService() {
       <Service />
       <Footer />
     </>
-  )
+  );
 }

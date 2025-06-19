@@ -1,6 +1,6 @@
-import { Footer } from '@/components/Footer'
-import { Navbar } from '@/components/Navbar'
-import { Landing } from './parts/Landing'
+import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
+import { Landing } from "./parts/Landing";
 
 export default function About() {
   return (
@@ -9,5 +9,5 @@ export default function About() {
       <Landing />
       <Footer />
     </>
-  )
+  );
 }
