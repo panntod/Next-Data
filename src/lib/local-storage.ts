@@ -16,13 +16,15 @@ function setLocalStorage<T>(key: string, value: T): void {
  * Attempt to parse JSON, fallback to string
  */
 function getLocalStorage<T = unknown>(key: string): T | string | null {
-  const item = localStorage.getItem(key)
-  if (item === null) return null
+  if (typeof window === "undefined") return null;
+
+  const item = localStorage.getItem(key);
+  if (item === null) return null;
 
   try {
-    return JSON.parse(item) as T
+    return JSON.parse(item) as T;
   } catch {
-    return item
+    return item;
   }
 }
 
@@ -33,4 +35,5 @@ function clearLocalStorage(): void {
   localStorage.clear()
 }
 
-export { clearLocalStorage, getLocalStorage, setLocalStorage }
+export { clearLocalStorage, getLocalStorage, setLocalStorage };
+

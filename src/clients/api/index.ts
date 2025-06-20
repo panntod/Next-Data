@@ -45,7 +45,7 @@ async function refreshToken(): Promise<AxiosResponse<RefreshTokenResponse>> {
 
 // Initialize authentication on app load
 async function initializeAuth(): Promise<void> {
-  const token = typeof window !== 'undefined' && localStorage && getLocalStorage<string>('accessToken')
+  const token = getLocalStorage<string>('accessToken')
 
   if (token) {
     const decoded = jwtDecode<Payload>(token)
@@ -127,8 +127,8 @@ function processQueue(error: unknown, token?: string): void {
 
 // Request interceptor
 api.interceptors.request.use(async config => {
-  const token = typeof window !== 'undefined' && localStorage && getLocalStorage<string>('accessToken')
-  const refreshToken = typeof window !== 'undefined' && localStorage && getLocalStorage<string>('refreshToken')
+  const token = getLocalStorage<string>('accessToken')
+  const refreshToken = getLocalStorage<string>('refreshToken')
 
   if (config.url && ['/auth/login', '/auth/refresh', '/auth/logout'].includes(config.url)) {
     return config // Skip authentication for specific routes
