@@ -1,8 +1,9 @@
-import { ReactNode } from 'react'
-import { SizeVariant } from '../constant/SIZE'
+import { ReactNode } from "react";
+import { SizeVariant } from "../constant/SIZE";
 
 export interface TypographyProps {
-  children: ReactNode
-  size?: SizeVariant
-  className?: string
+  children: ReactNode;
+  size?: SizeVariant;
+  className?: string;
+  htmlFor?: string;
 }
